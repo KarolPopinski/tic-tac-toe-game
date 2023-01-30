@@ -16,6 +16,14 @@ public class GameApp {
         int boardSize = new Scanner(System.in).nextInt();
         char[][] board = new char[boardSize][boardSize];
 
+        // W metodzie main mam dwóch graczy którzy naprzemian wykonują swoje ruchy do momentu zwycięstwa jednego z nich
+        //albo remisu. Nie wiem, jak dodać wariant gry z komputerem w której komputer będzie losował wartość od 0 do 9
+        // dla osi X i od 0 do 9 dla osi Y. Wiem że poruszanie się po tablicy nie odbywa się po osiach, ale tak jest mi
+        // lepiej sobie wyobrazić. Próbowałem różnych wariantów, ale jedyny który mi wychodzi dotyczy gry na planszy 3x3
+        //gdzie mam zmapowane klawisze 0-9 zapisane wszystki możliwości - wersja z PC w [rzesłanych plikach TXT.
+        //próba rozbudowy tablicy skończyła się fiaskiem, dlatego powróciłem do responsywnej tablicy ale tu nie wiem
+        //jak mam wsadzić computer zamiast Player2?????????? HELP!
+
         System.out.println("Player 1, what is Your name?");
         String player1 = in.nextLine();
         System.out.println();
@@ -82,6 +90,12 @@ public class GameApp {
         System.out.println("###GAME OVER###");
     }
 
+    //nie wiem jak przerobić?albo napisać II metodę do sprawdzania warunku zwycięswtwa. Obecna metoda sprawdza warunek
+    //dostosujwac sie do wielkosci tablicy. Jezeli gram na tablic 3x3 super -> sprawdzi wiersze, kolumny i przekatne
+    //super ale jezeli tablica jest 10x10 to jedzie na calej dlugosci. Przez co np X musza byc w calym wierszu albo w calej
+    //kolumnie cyli 10 a warunek zaliczenia to 5 przy tablicy 10x10 - az mnie korcilo zeby podzilic to po prostu przez 2
+    //ale to chyba nie ten kierunek.......ogolnie zalamka :-(
+    //HELP!
     public static char hasWon(char[][] board) {
 
         for (int i = 0; i < board.length; i++) {
