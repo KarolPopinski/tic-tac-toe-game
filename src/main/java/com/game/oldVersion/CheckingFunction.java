@@ -1,4 +1,6 @@
-package com.game.TicTacToe;
+package com.game.oldVersion;
+
+import com.game.oldVersion.Board;
 
 public class CheckingFunction {
 

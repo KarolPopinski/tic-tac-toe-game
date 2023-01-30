@@ -1,4 +1,4 @@
-package com.game.TicTacToe;
+package com.game.oldVersion;
 
 import java.util.Scanner;
 
